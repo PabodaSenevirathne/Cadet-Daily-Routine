@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AADF257B-8CB8-4BA5-8E45-C99E696D9AC9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CadetSystem</RootNamespace>
+    <AssemblyName>CadetSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="DataAccessLayer.cs" />
+    <Compile Include="EmailSender.cs" />
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdminAddCadet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminAddCadet.Designer.cs">
+      <DependentUpon>FrmAdminAddCadet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdminAddOfficer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminAddOfficer.Designer.cs">
+      <DependentUpon>FrmAdminAddOfficer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminHome.Designer.cs">
+      <DependentUpon>FrmAdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdminPasswordReset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminPasswordReset.Designer.cs">
+      <DependentUpon>FrmAdminPasswordReset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdminProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminProfile.Designer.cs">
+      <DependentUpon>FrmAdminProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetAttendance.Designer.cs">
+      <DependentUpon>FrmCadetAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetAttendanceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetAttendanceView.Designer.cs">
+      <DependentUpon>FrmCadetAttendanceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetHome.Designer.cs">
+      <DependentUpon>FrmCadetHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetMeals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetMeals.Designer.cs">
+      <DependentUpon>FrmCadetMeals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetOccurrence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetOccurrence.Designer.cs">
+      <DependentUpon>FrmCadetOccurrence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetOccurrenceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetOccurrenceView.Designer.cs">
+      <DependentUpon>FrmCadetOccurrenceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetParadestate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetParadestate.Designer.cs">
+      <DependentUpon>FrmCadetParadestate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetPasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetPasswordChange.Designer.cs">
+      <DependentUpon>FrmCadetPasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForgotPassword.Designer.cs">
+      <DependentUpon>FrmForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetProfile.Designer.cs">
+      <DependentUpon>FrmCadetProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetReports.Designer.cs">
+      <DependentUpon>FrmCadetReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetRollcall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetRollcall.Designer.cs">
+      <DependentUpon>FrmCadetRollcall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetRollcallView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetRollcallView.Designer.cs">
+      <DependentUpon>FrmCadetRollcallView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOfficerAnnouncements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOfficerAnnouncements.Designer.cs">
+      <DependentUpon>FrmOfficerAnnouncements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOfficerAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOfficerAttendance.Designer.cs">
+      <DependentUpon>FrmOfficerAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOfficerCadetView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOfficerCadetView.Designer.cs">
+      <DependentUpon>FrmOfficerCadetView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOfficerHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOfficerHome.Designer.cs">
+      <DependentUpon>FrmOfficerHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOfficerMeals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOfficerMeals.Designer.cs">
+      <DependentUpon>FrmOfficerMeals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOfficerOccurrence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOfficerOccurrence.Designer.cs">
+      <DependentUpon>FrmOfficerOccurrence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOfficerParadestate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOfficerParadestate.Designer.cs">
+      <DependentUpon>FrmOfficerParadestate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOfficerPasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOfficerPasswordChange.Designer.cs">
+      <DependentUpon>FrmOfficerPasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOfficerprofile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOfficerprofile.Designer.cs">
+      <DependentUpon>FrmOfficerprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOfficerReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOfficerReports.Designer.cs">
+      <DependentUpon>FrmOfficerReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOfficerRollcall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOfficerRollcall.Designer.cs">
+      <DependentUpon>FrmOfficerRollcall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetParadeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetParadeView.Designer.cs">
+      <DependentUpon>FrmCadetParadeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadetMealView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadetMealView.Designer.cs">
+      <DependentUpon>FrmCadetMealView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralSettings.cs" />
+    <Compile Include="Instructor.cs" />
+    <Compile Include="Ocadet.cs" />
+    <Compile Include="Officer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdminAddCadet.resx">
+      <DependentUpon>FrmAdminAddCadet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdminAddOfficer.resx">
+      <DependentUpon>FrmAdminAddOfficer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdminHome.resx">
+      <DependentUpon>FrmAdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdminPasswordReset.resx">
+      <DependentUpon>FrmAdminPasswordReset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdminProfile.resx">
+      <DependentUpon>FrmAdminProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetAttendance.resx">
+      <DependentUpon>FrmCadetAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetAttendanceView.resx">
+      <DependentUpon>FrmCadetAttendanceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetHome.resx">
+      <DependentUpon>FrmCadetHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetMeals.resx">
+      <DependentUpon>FrmCadetMeals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetOccurrence.resx">
+      <DependentUpon>FrmCadetOccurrence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetOccurrenceView.resx">
+      <DependentUpon>FrmCadetOccurrenceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetParadestate.resx">
+      <DependentUpon>FrmCadetParadestate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetPasswordChange.resx">
+      <DependentUpon>FrmCadetPasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForgotPassword.resx">
+      <DependentUpon>FrmForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetProfile.resx">
+      <DependentUpon>FrmCadetProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetReports.resx">
+      <DependentUpon>FrmCadetReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetRollcall.resx">
+      <DependentUpon>FrmCadetRollcall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetRollcallView.resx">
+      <DependentUpon>FrmCadetRollcallView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOfficerAnnouncements.resx">
+      <DependentUpon>FrmOfficerAnnouncements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOfficerAttendance.resx">
+      <DependentUpon>FrmOfficerAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOfficerCadetView.resx">
+      <DependentUpon>FrmOfficerCadetView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOfficerHome.resx">
+      <DependentUpon>FrmOfficerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOfficerMeals.resx">
+      <DependentUpon>FrmOfficerMeals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOfficerOccurrence.resx">
+      <DependentUpon>FrmOfficerOccurrence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOfficerParadestate.resx">
+      <DependentUpon>FrmOfficerParadestate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOfficerPasswordChange.resx">
+      <DependentUpon>FrmOfficerPasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOfficerprofile.resx">
+      <DependentUpon>FrmOfficerprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOfficerReports.resx">
+      <DependentUpon>FrmOfficerReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOfficerRollcall.resx">
+      <DependentUpon>FrmOfficerRollcall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetParadeView.resx">
+      <DependentUpon>FrmCadetParadeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadetMealView.resx">
+      <DependentUpon>FrmCadetMealView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgCadet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgOfficer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgAdmin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kdu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgclose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgloginbtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgloginbtn2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cherest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Log Off-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2000px-GreenButton_RightArrow.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\officer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadet1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebarattendance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebarhome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebarlogout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebarmeals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebaroccurrence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebarperadestate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebarprofile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebarrollcall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task_report_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staff Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cherest1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-9-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splashid-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadet+Salute+White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Megaphone Cadet WHITE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_account_ticket_profile_badge_certification_access_card-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-button-png-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passwrd change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope-png-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\076016-3d-transparent-glass-icon-business-envelope1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadets 4to.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staff 4to.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message-icon-2152.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_icon_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staff 4to1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Officers 4to.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
